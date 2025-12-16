@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Pagina web Carla Painemil</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Fonoaudióloga Carla Painemil | Especialista en Terapia del Lenguaje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header con gradiente y animación */
+        header {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            color: white;
+            padding: 100px 20px 80px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            from { transform: translateY(0); }
+            to { transform: translateY(-100px); }
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        header p {
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            opacity: 0.95;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Navegación flotante */
+        nav {
+            background: white;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 20px 25px;
+            color: #ff6b9d;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+
+        nav a:hover {
+            background: #fff5f8;
+            border-bottom-color: #ff6b9d;
+            transform: translateY(-2px);
+        }
+
+        /* Botón principal mejorado */
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: #ff6b9d;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+            background: #fff5f8;
+        }
+
+        .btn:active {
+            transform: translateY(-1px);
+        }
+
+        /* Secciones con animación al scroll */
+        section {
+            padding: 80px 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        section:nth-child(even) {
+            background: #fff5f8;
+        }
+
+        h2 {
+            color: #ff6b9d;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b9d, #c44569);
+            border-radius: 2px;
+        }
+
+        /* Cards de servicios */
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .servicio-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .servicio-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255,107,157,0.2);
+            border-color: #ff6b9d;
+        }
+
+        .servicio-card h3 {
+            color: #ff6b9d;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .servicio-card p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .servicio-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        /* Sobre mí con diseño mejorado */
+        .sobre-mi-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 40px;
+        }
+
+        .perfil-placeholder {
+            width: 250px;
+            height: 250px;
+            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 10px 40px rgba(255,107,157,0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5em;
+            color: white;
+        }
+
+        .sobre-mi-text {
+            flex: 1;
+        }
+
+        .sobre-mi-text p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        /* Contacto con estilo moderno */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .contacto-item {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .contacto-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(255,107,157,0.15);
+        }
+
+        .contacto-icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            color: #ff6b9d;
+        }
+
+        .contacto-item h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .contacto-item a {
+            color: #ff6b9d;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contacto-item a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+            
+            header p {
+                font-size: 1.1em;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                padding: 15px;
+            }
+
+            .sobre-mi-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .servicios-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2em;
+            }
+        }
+
+        /* Animación de entrada para elementos */
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>👩‍⚕️ Fonoaudióloga Carla Painemil</h1>
+        <p>Evaluación, tratamiento y acompañamiento personalizado para todas las edades</p>
+        <a class="btn" href="https://wa.me/56953197151">📱 Agendar Hora por WhatsApp</a>
+    </header>
+
+    <nav>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#agendar">Agendar</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <section id="sobre-mi">
+        <h2>Sobre mí</h2>
+        <div class="sobre-mi-content">
+            <div class="perfil-placeholder">👩‍⚕️</div>
+            <div class="sobre-mi-text">
+                <p>Soy la Fonoaudióloga Carla Painemil, profesional especializada en el área infanto-juvenil y en atención de adultos.</p>
+                <p>Con experiencia en atención clínica, me dedico a proporcionar evaluaciones completas, terapias personalizadas y servicios especializados como lavados de oídos a domicilio.</p>
+                <p>Mi objetivo es ayudar a cada paciente a alcanzar su máximo potencial comunicativo, trabajando de manera individualizada según sus necesidades específicas.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <h2>Servicios Especializados</h2>
+        <div class="servicios-grid">
+            <div class="servicio-card">
+                <div class="servicio-icon">🗣️</div>
+                <h3>Terapia del Lenguaje</h3>
+                <p>Evaluación y tratamiento integral de trastornos del lenguaje expresivo y comprensivo en niños y adultos.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">👶</div>
+                <h3>Área Infanto-Juvenil</h3>
+                <p>Atención especializada para niños y adolescentes con dificultades en el desarrollo del lenguaje y habla.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">👨</div>
+                <h3>Área Adultos</h3>
+                <p>Rehabilitación del lenguaje en adultos, incluyendo trastornos neurológicos y de la voz.</p>
+            </div>
+            <div class="servicio-card">
+                <div class="servicio-icon">🏠</div>
+                <h3>Lavado de Oídos a Domicilio</h3>
+                <p>Servicio profesional de limpieza ótica en la comodidad de tu hogar.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agendar">
+        <h2>Agenda tu Hora</h2>
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-size: 1.2em; margin-bottom: 30px; color: #555;">Reserva tu cita de manera rápida y sencilla a través de WhatsApp</p>
+            <a class="btn" href="https://wa.me/56953197151">📱 Contactar por WhatsApp</a>
+            <p style="margin-top: 30px; color: #777;">Respuesta rápida y atención personalizada</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <div class="contacto-grid">
+            <div class="contacto-item">
+                <div class="contacto-icon">✉️</div>
+                <h3>Email</h3>
+                <a href="mailto:flga.carlapainemil@gmail.com">flga.carlapainemil@gmail.com</a>
+            </div>
+            <div class="contacto-item">
+                <div class="contacto-icon">📱</div>
+                <h3>WhatsApp</h3>
+                <a href="https://wa.me/56953197151">+56 953197151</a>
+            </div>
+            <div class="contacto-item">
+                <div class="contacto-icon">📸</div>
+                <h3>Instagram</h3>
+                <a href="https://instagram.com/flga.carla.painemil" target="_blank">@flga.carla.painemil</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Fonoaudióloga Carla Painemil - Todos los derechos reservados</p>
+        <p style="margin-top: 10px; font-size: 0.9em; opacity: 0.8;">Atención profesional y personalizada</p>
+    </footer>
+</body>
+</html>
+    
+  </body>
+  
+</html>
